@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Inter:wght@300;400&family=Space+Mono:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-void font-sans text-ink antialiased;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-ink text-void;
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 9999px;
+  }
+}
+
+@layer components {
+  .label {
+    @apply font-mono text-[10px] uppercase tracking-ultra text-dim;
+  }
+  .hair {
+    @apply border-line;
+  }
+  /* masked / hidden value — the fog of war */
+  .fog {
+    @apply text-faint;
+    filter: blur(2.5px);
+    user-select: none;
+  }
+}
+
+/* ---------- flat circular mark ---------- */
+.orb {
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: rgba(246, 246, 246, 0.92);
+  box-shadow: 0 0 28px rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- content wrapper ---------- */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-floaty,
+  .animate-floaty-slow,
+  .animate-spinslow,
+  .animate-spinrev,
+  .animate-breathe {
+    animation: none !important;
+  }
+}
+
+/* ---------- film grain ---------- */
+.grain {
+  position: fixed;
+  inset: -50%;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
