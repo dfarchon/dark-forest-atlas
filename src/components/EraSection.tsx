@@ -71,7 +71,7 @@ function VersionItem({
                     href={l.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="font-mono text-[11px] uppercase tracking-wider text-faint underline decoration-line underline-offset-4 transition-colors hover:text-ink"
+                    className="font-mono text-[11px] uppercase tracking-wider text-dim underline-offset-4 transition-colors hover:text-ink hover:underline hover:decoration-faint"
                   >
                     {l.label} ↗
                   </a>
@@ -158,7 +158,7 @@ export default function EraSection({
             href={era.repo}
             target="_blank"
             rel="noreferrer"
-            className="mt-14 inline-flex items-center gap-2 border-t border-line pt-10 font-mono text-[11px] uppercase tracking-wider text-faint transition-colors hover:text-ink"
+            className="mt-14 inline-flex items-center gap-2 border-t border-line pt-10 font-mono text-[11px] uppercase tracking-wider text-dim transition-colors hover:text-ink"
           >
             source · {repoLabel(era.repo)} ↗
           </a>

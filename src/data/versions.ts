@@ -541,7 +541,6 @@ export const ERAS: Era[] = [
         network: "Aztec testnet",
         links: [
           { label: "dark forest aztec", href: "https://github.com/dfarchon/dark-forest-aztec" },
-          { label: "onchainreality.xyz", href: "https://onchainreality.xyz/blog" },
         ],
       },
     ],
@@ -617,8 +616,8 @@ export const COMPARE_ROWS: CompareRow[] = [
   },
   {
     dimension: "Account model",
-    origin: "EOA + relayer",
-    ares: "EOA + relayer",
+    origin: "Burner wallet",
+    ares: "Burner wallet",
     mud: "EOA + account delegation",
     aztec: "Aztec account / burner accounts",
   },

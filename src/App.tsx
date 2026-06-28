@@ -82,7 +82,7 @@ export default function App() {
                     href={x.h}
                     target="_blank"
                     rel="noreferrer"
-                    className="font-mono text-[10px] uppercase tracking-[0.3em] text-faint transition-colors hover:text-ink"
+                    className="font-mono text-[10px] uppercase tracking-[0.3em] text-dim transition-colors hover:text-ink"
                   >
                     {x.l} ↗
                   </a>
