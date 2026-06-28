@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Tools (local-only utilities, e.g. OG image generation)
+tools/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
