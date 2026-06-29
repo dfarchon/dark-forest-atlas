@@ -1,4 +1,4 @@
-# DF-Atlas — Dark Forest tech-stack evolution
+# DF-Atlas: Dark Forest tech-stack evolution
 
 An atlas of the **community-maintained Dark Forest** versions built by the
 [DFArchon team](https://x.com/DFArchon) after the official team stopped shipping

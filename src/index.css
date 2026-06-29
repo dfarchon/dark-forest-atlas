@@ -39,7 +39,7 @@
   .hair {
     @apply border-line;
   }
-  /* masked / hidden value — the fog of war */
+  /* masked / hidden value: the fog of war */
   .fog {
     @apply text-faint;
     filter: blur(2.5px);

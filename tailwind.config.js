@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Pak — pure monochrome. No hue. Mass, light, void.
+        // Pak: pure monochrome. No hue. Mass, light, void.
         void: "#000000",
         coal: "#0a0a0b",
         ink: "#F4F4F5",

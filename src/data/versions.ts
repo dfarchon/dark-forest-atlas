@@ -152,7 +152,7 @@ export const ERAS: Era[] = [
         version: "v0.6.1",
         date: "2021 May",
         sortKey: 2021.4,
-        title: "The Seekers' Journey \u2014 Round 1 (Fascinated Manager)",
+        title: "The Seekers' Journey: Round 1 (Fascinated Manager)",
         summary:
           "v0.6 \u201cThe Seekers' Journey\u201d reworked the universe around exploration. The Gear ship prospects Foundries to mint artifacts, and Spacetime Rips let players withdraw or deposit artifacts to an xDAI wallet. Space types ran Nebula \u2192 Space \u2192 Deep Space \u2192 Dead Space. From this round the top 63 players were awarded trophy planet NFTs in Valhalla.",
         highlights: [
@@ -213,7 +213,7 @@ export const ERAS: Era[] = [
         version: "v0.6.5",
         date: "2022 Feb",
         sortKey: 2022.13,
-        title: "Round 5 (The Junk Wars) \u2014 Diamond standard & Lobbies",
+        title: "Round 5 (The Junk Wars): Diamond standard & Lobbies",
         summary:
           "The last official round, beginning February 18, 2022. Contracts were re-architected onto the Diamond standard (EIP-2535): game logic split into facets (DFCore, DFMove, DFArtifact, DFWhitelist, DFAdmin, DFLobby, DFCapture \u2026) composed through diamondCut, breaking past the 24KB contract limit into a modular, upgradeable system. It also shipped Lobbies for self serve custom rounds. After Q1 2022 the official team stopped shipping; every community branch builds on this Diamond codebase.",
         highlights: [
