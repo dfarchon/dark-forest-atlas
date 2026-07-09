@@ -240,7 +240,7 @@ export const ERAS: Era[] = [
     tagline: "The community-driven takeover of the Diamond stack, keeping the forest alive round after round with new artifacts, sharper ZK and alliance play.",
     accent: "nebula",
     story:
-      "DFArchon began in 2021 as active Dark Forest players, first shipping plugins (Highlight Friends, Peace Dove, Towards Center …), then the DF GAIA plugin framework (2022) and the DF ARTEMIS bounty and mercenary system (2022). ARES was the leap from plugins to running full community game rounds. It picked up the open source code and kept the proven stack: Solidity / Hardhat / Circom / React / WebGL, while iterating hard on gameplay and the ZK circuits. Contracts stay on the Diamond standard (ERC-2535); the frontend still builds with Webpack. Shared logic was scoped under @dfares/* packages. The v0.1.1 to v0.1.4 community rounds shipped from 2023 to 2024 on Redstone mainnet, and the line was revived with a modern v0.1.5 test round in 2026.",
+      "DFArchon began in 2021 as active Dark Forest players, first shipping plugins (Highlight Friends, Peace Dove, Towards Center …), then the DF GAIA plugin framework (2022) and the DF ARTEMIS bounty and mercenary system (2022). ARES was the leap from plugins to running full community game rounds. It picked up the open source code and kept the proven stack: Solidity / Hardhat / Circom / React / WebGL, while iterating hard on gameplay and the ZK circuits. Contracts stay on the Diamond standard (ERC-2535); the frontend still builds with Webpack. Shared logic was scoped under @dfares/* packages. The v0.1.1 to v0.1.4 community rounds shipped from 2023 to 2024 on Redstone mainnet, and the line was revived with a modern v0.1.5 test round on Optimism in 2026.",
     stack: {
       language: [
         { label: "Language", value: "TypeScript 4.5 + Solidity" },
@@ -345,7 +345,7 @@ export const ERAS: Era[] = [
           "Buy energy flow + quick join settings",
           "Smoother transaction UX",
         ],
-        network: "Redstone mainnet (test round)",
+        network: "Optimism (test round)",
         links: [
           { label: "DFARES v0.1", href: "https://github.com/dfarchon/DFARES-v0.1" },
         ],
