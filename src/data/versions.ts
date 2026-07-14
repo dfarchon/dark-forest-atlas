@@ -285,7 +285,7 @@ export const ERAS: Era[] = [
           "Artifact purchasing system introduced",
           "Cooldowns on artifact purchase & activation",
         ],
-        network: "Redstone mainnet",
+        network: "AltLayer Rollup",
       },
       {
         id: "ares-012",
@@ -300,7 +300,7 @@ export const ERAS: Era[] = [
           "ZK circuit upgrade: high level center planets keep coords hidden",
           "Ranking rewards claiming planets near the center",
         ],
-        network: "Redstone mainnet",
+        network: "Redstone testnet",
       },
       {
         id: "ares-013",
@@ -345,7 +345,7 @@ export const ERAS: Era[] = [
           "Buy energy flow + quick join settings",
           "Smoother transaction UX",
         ],
-        network: "Optimism (test round)",
+        network: "MegaETH mainnet",
         links: [
           { label: "DFARES v0.1", href: "https://github.com/dfarchon/DFARES-v0.1" },
         ],
@@ -442,7 +442,7 @@ export const ERAS: Era[] = [
           "AI assisted decision tooling (in client LangChain)",
           "Onboarding improvements",
         ],
-        network: "Redstone mainnet",
+        network: "Base mainnet",
       },
       {
         id: "mud-014",
@@ -457,7 +457,7 @@ export const ERAS: Era[] = [
           "Fairer veteran ↔ newcomer balance",
           "Artifact parameters rebalanced",
         ],
-        network: "Redstone mainnet",
+        network: "Base mainnet",
       },
       {
         id: "punk-011",
@@ -472,7 +472,7 @@ export const ERAS: Era[] = [
           "Foundation for a technology tree",
           "Purchasable space junk → prize pool",
         ],
-        network: "Redstone mainnet",
+        network: "Opitimism mainnet",
         links: [
           { label: "dark forest punk", href: "https://github.com/dfarchon/dark-forest-punk" },
           { label: "dfpunk.xyz", href: "https://dfpunk.xyz/" },
