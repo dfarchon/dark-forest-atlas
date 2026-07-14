@@ -1,0 +1,18 @@
+# DF-Atlas
+> Unofficial atlas of community-maintained Dark Forest tech stacks after the official team stopped shipping (2022).
+
+Dark Forest eras: Origin → ARES → MUD/Punk → Aztec. Focus is architecture and stack evolution, not gameplay guides. All structured content is generated from a single typed data source.
+
+## Machine-readable data
+- [Full atlas (Markdown)](https://df-atlas.onchainreality.xyz/llms-full.txt): All eras, versions, stacks, and the side-by-side comparison
+- [Eras JSON](https://df-atlas.onchainreality.xyz/api/eras.json): Structured eras + versions (UI-only fields omitted)
+- [Compare JSON](https://df-atlas.onchainreality.xyz/api/compare.json): Side-by-side stack comparison rows
+
+## Human site
+- [Home](https://df-atlas.onchainreality.xyz/): Timeline, era deep-dives, stack comparison
+
+## Sources
+- [Original Dark Forest](https://github.com/darkforest-eth): darkforest-eth · v0.3 → v0.6.5 · 2019 to Q1 2022
+- [Dark Forest ARES](https://github.com/dfarchon/DFARES-v0.1): DFAres · v0.1.1 → v0.1.5 · Q1 2023 to Q2 2024 · revived 2026
+- [Dark Forest MUD → Punk](https://github.com/dfarchon/dark-forest-punk): DF MUD v0.1.1 → DF PUNK v0.1.1 · Q3 2024 to present
+- [Dark Forest Aztec](https://github.com/dfarchon/dark-forest-aztec): dfpunk aztec · v0.1.0 · Experimental · Aztec testnet

@@ -24,8 +24,9 @@ tech-stack grid + version milestones), and a side-by-side **stack comparison**.
 
 ```sh
 npm install
-npm run dev      # http://localhost:5173
-npm run build    # production build to dist/
+npm run dev             # http://localhost:5173
+npm run generate:agent  # refresh public/llms*.txt and public/api/*.json
+npm run build           # generate agent docs, then production build to dist/
 ```
 
 ## Editing content
@@ -33,6 +34,18 @@ npm run build    # production build to dist/
 All version/tech-stack data lives in a single typed file:
 [`src/data/versions.ts`](src/data/versions.ts). Add a version by appending to the
 relevant era's `versions` array, or add a comparison row in `COMPARE_ROWS`.
+
+## Agent-readable interfaces
+
+`npm run generate:agent` (also runs during `npm run build`) regenerates static
+agent-facing files from `versions.ts`:
+
+| URL | Contents |
+| --- | --- |
+| https://df-atlas.onchainreality.xyz/llms.txt | Curated index (llms.txt spec) |
+| https://df-atlas.onchainreality.xyz/llms-full.txt | Full Markdown atlas |
+| https://df-atlas.onchainreality.xyz/api/eras.json | Structured eras + versions |
+| https://df-atlas.onchainreality.xyz/api/compare.json | Side-by-side comparison rows |
 
 ## Sources
 

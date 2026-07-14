@@ -1,0 +1,86 @@
+[
+  {
+    "dimension": "Contract language",
+    "origin": "Solidity",
+    "ares": "Solidity",
+    "mud": "Solidity",
+    "aztec": "Noir"
+  },
+  {
+    "dimension": "Contract architecture",
+    "origin": "Diamond / ERC-2535 (v0.6.5)",
+    "ares": "Diamond / ERC-2535",
+    "mud": "MUD ECS: tables + Systems",
+    "aztec": "Storage + System contracts"
+  },
+  {
+    "dimension": "Contract toolchain",
+    "origin": "Hardhat",
+    "ares": "Hardhat 2.6.8",
+    "mud": "Foundry v1.0.0 + MUD v2.2.23",
+    "aztec": "Aztec.js / aztec nargo"
+  },
+  {
+    "dimension": "ZK proving",
+    "origin": "Circom + snarkjs (offchain)",
+    "ares": "Circom + snarkjs (enhanced)",
+    "mud": "Circom + snarkjs (carried over)",
+    "aztec": "Native Aztec circuits in PXE"
+  },
+  {
+    "dimension": "Hash function",
+    "origin": "MiMC",
+    "ares": "MiMC",
+    "mud": "MiMC",
+    "aztec": "Poseidon2"
+  },
+  {
+    "dimension": "Onchain state",
+    "origin": "Full entity fields",
+    "ares": "Full entity fields",
+    "mud": "Full entity fields (tables)",
+    "aztec": "Poseidon2 state hash (state offchain)"
+  },
+  {
+    "dimension": "Frontend build",
+    "origin": "Webpack",
+    "ares": "Webpack",
+    "mud": "Vite",
+    "aztec": "Vite 7"
+  },
+  {
+    "dimension": "Data sync model",
+    "origin": "Contract events",
+    "ares": "Contract events",
+    "mud": "MUD tables (recs + store sync)",
+    "aztec": "Public log indexer (server + client)"
+  },
+  {
+    "dimension": "Account model",
+    "origin": "Burner wallet",
+    "ares": "Burner wallet",
+    "mud": "EOA + account delegation",
+    "aztec": "Aztec account / burner accounts"
+  },
+  {
+    "dimension": "Package manager",
+    "origin": "yarn workspaces",
+    "ares": "yarn v1 workspaces",
+    "mud": "pnpm workspaces",
+    "aztec": "pnpm workspaces"
+  },
+  {
+    "dimension": "Node runtime",
+    "origin": "Node ≥ 16",
+    "ares": "Node 16",
+    "mud": "Node 20",
+    "aztec": "Node 24"
+  },
+  {
+    "dimension": "TypeScript",
+    "origin": "4.5",
+    "ares": "4.5",
+    "mud": "5.6",
+    "aztec": "5.9"
+  }
+]

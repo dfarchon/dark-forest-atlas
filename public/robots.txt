@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+# LLM index: https://df-atlas.onchainreality.xyz/llms.txt
 Sitemap: https://df-atlas.onchainreality.xyz/sitemap.xml

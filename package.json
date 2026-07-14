@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "generate:agent": "tsx scripts/generate-agent-docs.ts",
+    "build": "npm run generate:agent && tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },
@@ -22,6 +23,7 @@
     "oxlint": "^1.69.0",
     "postcss": "^8.5.15",
     "tailwindcss": "^3.4.19",
+    "tsx": "^4.23.1",
     "typescript": "~6.0.2",
     "vite": "^8.1.0"
   }

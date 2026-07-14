@@ -1,0 +1,485 @@
+# DF-Atlas — full atlas
+
+> Unofficial atlas of community-maintained Dark Forest tech stacks after the official team stopped shipping (2022).
+
+## Original Dark Forest
+
+- **Id**: origin
+- **Codename**: darkforest-eth · v0.3 → v0.6.5
+- **Period**: 2019 to Q1 2022
+- **Maintainer**: Dark Forest official team
+- **Tagline**: The foundation: a space-themed fully onchain MMORTS with a zkSNARK fog of war.
+- **Repo**: https://github.com/darkforest-eth
+
+### Story
+
+The original team built the template every later branch inherits: a yarn workspaces monorepo split into circuits / eth / client. zkSNARKs power a cryptographic fog of war. The client generates proofs locally and the contracts verify them before mutating onchain state. In v0.6.5 the contracts migrated to the Diamond standard (ERC-2535) for modular, upgradeable game logic. After Q1 2022 the official team stopped shipping new versions, leaving the open source code for the community.
+
+### Stack
+
+#### Language
+- **Language**: TypeScript 4.5 + Solidity
+- **Runtime**: Node ≥ 16
+
+#### Contracts
+- **Framework**: Hardhat
+- **Architecture**: Diamond standard (ERC-2535) since v0.6.5
+- **Local chain**: Hardhat node / Ganache
+
+#### ZK
+- **Circuits**: Circom
+- **Prover**: snarkjs (proofs generated in browser)
+- **Verify**: Onchain Solidity Verifier.sol
+
+#### Frontend
+- **UI**: React + WebGL renderer
+- **Build**: Webpack
+- **Model**: "Thin client"; all logic onchain
+
+#### Data
+- **Sync**: Listen to smart contract events
+- **Storage**: Browser IndexedDB cache
+
+#### Tooling
+- **Monorepo**: yarn workspaces + Lerna
+- **Packages**: @darkforest_eth/* shared modules
+- **Quality**: ESLint + Prettier
+
+### Versions
+
+### v0.3 — First public round & reference implementation
+
+- **Date**: 2020 Aug
+- **Id**: df-v03
+- **Network**: Ropsten testnet
+
+The first public competitive round, run as a whitelisted beta on the Ethereum Ropsten testnet. The team open sourced the full reference implementation (contracts, Circom ZK circuits and client) on GitHub, with a 1024 DAI prize pool for the top 15 players, then reopened the universe as a freeplay mode.
+
+**Highlights:**
+- First public competitive round on Ropsten testnet
+- Reference implementation open sourced: contracts + Circom circuits + client
+- 1024 DAI prize pool for the top 15 players
+- Universe reopened afterward as freeplay mode
+
+**Links:**
+- [darkforest-eth org](https://github.com/darkforest-eth)
+- [zkga.me blog](https://blog.zkga.me)
+
+### v0.4 — Move to xDAI & burner wallets
+
+- **Date**: 2020 Oct
+- **Id**: df-v04
+- **Network**: xDAI (Gnosis Chain)
+
+Ropsten's long reorgs (and at one point crashing the testnet) pushed the game onto the xDAI chain (now Gnosis Chain). Introduced burner wallets stored in browser local storage (inspired by Austin Griffith) with auto dripped xDAI so players could start instantly without a wallet extension. Added NEBULA / space regions, silver mining and planet upgrades.
+
+**Highlights:**
+- Migrated to the xDAI chain (Gnosis Chain) for cheap, fast gas
+- Burner wallets + auto dripped xDAI, Metamask no longer required
+- Space regions, silver mining & planet upgrades
+- 1024 DAI prize pool for the top 15 players
+
+**Links:**
+- [Announcing v0.4](https://blog.zkga.me/dark-forest-v04)
+
+### v0.5 — Plugins & NFT artifacts
+
+- **Date**: 2020 Dec
+- **Id**: df-v05
+- **Network**: xDAI (Gnosis Chain)
+
+The Christmas 2020 release that opened the game to modding: a built in plugin system plus plugin-able renderers turned players into builders. Added ERC-721 NFT artifacts discoverable in game (up to Legendary and Mythic rarities), a freeplay mode and 1000+ new invite keys.
+
+**Highlights:**
+- Built in plugin system + custom renderer plugins
+- ERC-721 NFT artifacts found in game (Legendary & Mythic)
+- Freeplay mode and 1000+ new invite keys
+- Sparked the modding / “digital physics” community
+
+### v0.6.1 — The Seekers' Journey: Round 1 (Fascinated Manager)
+
+- **Date**: 2021 May
+- **Id**: df-v061
+- **Network**: xDAI (Gnosis Chain)
+
+v0.6 “The Seekers' Journey” reworked the universe around exploration. The Gear ship prospects Foundries to mint artifacts, and Spacetime Rips let players withdraw or deposit artifacts to an xDAI wallet. Space types ran Nebula → Space → Deep Space → Dead Space. From this round the top 63 players were awarded trophy planet NFTs in Valhalla.
+
+**Highlights:**
+- Gear ship + Foundries for minting artifacts
+- Spacetime Rips to import/export artifacts on chain
+- Space types: Nebula → Space → Deep Space → Dead Space
+- Valhalla: top 63 awarded trophy planet NFTs
+
+### v0.6.2 — Round 2 (Inspire Hallowed)
+
+- **Date**: 2021 Jun
+- **Id**: df-v062
+- **Network**: xDAI (Gnosis Chain)
+
+The second v0.6 official round, beginning June 28, 2021. Iterated on balance and stability on the Seekers' Journey ruleset while the plugin and tooling ecosystem kept maturing.
+
+**Highlights:**
+- Second official v0.6 round on xDAI
+- Balance & stability iteration on the artifact economy
+- Growing plugin & developer ecosystem
+
+### v0.6.3 — Round 3 (Grape Extra-Small)
+
+- **Date**: 2021 Aug
+- **Id**: df-v063
+- **Network**: xDAI (Gnosis Chain)
+
+The third v0.6 official round, beginning August 12, 2021. Continued tuning scoring and gameplay, with contracts and the @darkforest_eth packages refined round over round.
+
+**Highlights:**
+- Third official v0.6 round
+- Scoring & gameplay tuning
+- @darkforest_eth shared packages refined
+
+### v0.6.4 — Round 4 (Society Eggnog)
+
+- **Date**: 2021 Oct
+- **Id**: df-v064
+- **Network**: xDAI (Gnosis Chain)
+
+The fourth v0.6 official round, beginning October 1, 2021. The last round before the contracts were rebuilt on the Diamond standard, and a high water mark for community plugins, bots and onchain players like The Astral Colossus.
+
+**Highlights:**
+- Fourth official v0.6 round
+- Peak of community plugins, bots & onchain agents
+- Final round on the monolithic contract architecture
+
+### v0.6.5 — Round 5 (The Junk Wars): Diamond standard & Lobbies
+
+- **Date**: 2022 Feb
+- **Id**: df-v065
+- **Network**: xDAI (Gnosis Chain)
+
+The last official round, beginning February 18, 2022. Contracts were re-architected onto the Diamond standard (EIP-2535): game logic split into facets (DFCore, DFMove, DFArtifact, DFWhitelist, DFAdmin, DFLobby, DFCapture …) composed through diamondCut, breaking past the 24KB contract limit into a modular, upgradeable system. It also shipped Lobbies for self serve custom rounds. After Q1 2022 the official team stopped shipping; every community branch builds on this Diamond codebase.
+
+**Highlights:**
+- Contracts migrated to the Diamond standard (EIP-2535)
+- Logic split into facets via diamondCut (modular & upgradeable)
+- Lobbies: self serve custom rounds
+- Last official round; community inherits this codebase
+
+**Links:**
+- [DF & the Diamond Standard](https://blog.zkga.me/dark-forest-and-the-diamond-standard)
+- [darkforest v0.6](https://github.com/darkforest-eth/darkforest-v0.6)
+
+## Dark Forest ARES
+
+- **Id**: ares
+- **Codename**: DFAres · v0.1.1 → v0.1.5
+- **Period**: Q1 2023 to Q2 2024 · revived 2026
+- **Maintainer**: DFArchon team (community)
+- **Tagline**: The community-driven takeover of the Diamond stack, keeping the forest alive round after round with new artifacts, sharper ZK and alliance play.
+- **Repo**: https://github.com/dfarchon/DFARES-v0.1
+
+### Story
+
+DFArchon began in 2021 as active Dark Forest players, first shipping plugins (Highlight Friends, Peace Dove, Towards Center …), then the DF GAIA plugin framework (2022) and the DF ARTEMIS bounty and mercenary system (2022). ARES was the leap from plugins to running full community game rounds. It picked up the open source code and kept the proven stack: Solidity / Hardhat / Circom / React / WebGL, while iterating hard on gameplay and the ZK circuits. Contracts stay on the Diamond standard (ERC-2535); the frontend still builds with Webpack. Shared logic was scoped under @dfares/* packages. The v0.1.1 to v0.1.4 community rounds shipped from 2023 to 2024 on Redstone mainnet, and the line was revived with a modern v0.1.5 test round on Optimism in 2026.
+
+### Stack
+
+#### Language
+- **Language**: TypeScript 4.5 + Solidity
+- **Runtime**: Node 16 · yarn v1
+
+#### Contracts
+- **Framework**: Hardhat 2.6.8
+- **Architecture**: Diamond standard (ERC-2535)
+- **Local chain**: Ganache (persistent blocks)
+
+#### ZK
+- **Circuits**: Circom (enhanced per round)
+- **Prover**: snarkjs
+- **Notable**: v0.1.2 circuit lets center planets level up while hiding coords
+
+#### Frontend
+- **UI**: React 17 + WebGL renderer
+- **Build**: Webpack
+- **Port**: localhost:8081
+
+#### Data
+- **Sync**: Smart contract events
+- **Packages**: @dfares/events, @dfares/network
+
+#### Tooling
+- **Monorepo**: yarn workspaces + Lerna
+- **Packages**: @dfares/* (constants, gamelogic, snarks, renderer …)
+- **Grant**: Optimism OP grant (Season 5)
+
+### Versions
+
+### v0.1.1 — Links, shields & avatars
+
+- **Date**: 2023 May
+- **Id**: ares-011
+- **Network**: AltLayer Rollup
+
+First community round. Introduced Fire Link, Ice Link, Stellar Shield and Avatar, plus an artifact purchasing system with cooldowns on buying and activation.
+
+**Highlights:**
+- New artifacts: Fire Link, Ice Link, Stellar Shield, Avatar
+- Artifact purchasing system introduced
+- Cooldowns on artifact purchase & activation
+
+### v0.1.2 — Pink Bomb & smarter ZK
+
+- **Date**: 2023 Nov
+- **Id**: ares-012
+- **Network**: Redstone testnet
+
+Added the Pink Bomb and upgraded the ZK circuit so central planets can reach higher levels while still hiding exact coordinates. Players ranked higher for claiming planets near the universe center.
+
+**Highlights:**
+- New artifact: Pink Bomb
+- ZK circuit upgrade: high level center planets keep coords hidden
+- Ranking rewards claiming planets near the center
+
+### v0.1.3 — Kardashev & the in game economy
+
+- **Date**: 2024 May
+- **Id**: ares-013
+- **Network**: Redstone mainnet
+
+Introduced the Kardashev artifact for blue zone resource mobilization, added purchases for planets / artifacts / skins, and sponsor backed bounties.
+
+**Highlights:**
+- New artifact: Kardashev (resource mobilization)
+- Buy planets, artifacts and skins
+- Sponsor backed bounties
+
+### v0.1.4 — Unions & the shrinking core
+
+- **Date**: 2024 Aug
+- **Id**: ares-014
+- **Network**: Redstone mainnet
+
+Introduced the Union system for cooperative energy support, and a dynamically shrinking inner radius to slow early center capture and keep rounds competitive. Round 4 ran on Redstone mainnet with 180k+ transactions.
+
+**Highlights:**
+- Union system: cooperative energy support / alliances
+- Dynamically shrinking inner radius
+- Redstone mainnet round: 182,680+ transactions
+
+### v0.1.5 — ARES revived
+
+- **Date**: 2026 Jun
+- **Id**: ares-015
+- **Network**: MegaETH mainnet
+
+Brings ARES back as a modern test round: configurable artifact rules, a buy energy flow, quick join settings and smoother transaction UX.
+
+**Highlights:**
+- Configurable artifact rules
+- Buy energy flow + quick join settings
+- Smoother transaction UX
+
+**Links:**
+- [DFARES v0.1](https://github.com/dfarchon/DFARES-v0.1)
+
+## Dark Forest MUD → Punk
+
+- **Id**: mud
+- **Codename**: DF MUD v0.1.1 → DF PUNK v0.1.1
+- **Period**: Q3 2024 to present
+- **Maintainer**: DFArchon team (community)
+- **Tagline**: A ground up rebuild on the MUD engine: ECS, fully onchain, now evolving into Dark Forest Punk.
+- **Repo**: https://github.com/dfarchon/dark-forest-punk
+
+### Story
+
+Starting August 2024, DFArchon ported Dark Forest to the MUD engine and rebuilt both contracts and frontend. The biggest shift: from the Diamond standard to MUD's ECS (Entity Component System) world. Data lives in typed tables (defineWorld, namespace "df"), logic lives in Systems. The frontend moved from Webpack to Vite, and from event listening to reading MUD tables directly via @latticexyz/recs + store sync. The team frames its design around "Function as Entity". Tooling modernised across the board: pnpm, Foundry, Node 20, TypeScript 5.6. Through 2025 the line iterated to v0.1.4 and was rebranded Dark Forest Punk, adding an 11 material economy (encoded as a MaterialType enum) that lays the foundation for a technology tree.
+
+### Stack
+
+#### Language
+- **Language**: TypeScript 5.6 + Solidity
+- **Runtime**: Node 20 · pnpm ≥ 10
+
+#### Contracts
+- **Engine**: MUD v2.2.23 (@latticexyz)
+- **Architecture**: ECS: tables + Systems (defineWorld)
+- **Build**: Foundry v1.0.0
+- **Protocols**: planets · players · artifacts (+ guilds)
+
+#### ZK
+- **Circuits**: Circom (carried over from DF)
+- **Prover**: snarkjs / WASM
+- **Concept**: "Function as Entity"
+
+#### Frontend
+- **UI**: React 18 + WebGL (gl matrix)
+- **Build**: Vite
+- **Wallet**: viem + wagmi + RainbowKit
+- **State**: zustand · styled components · lit
+
+#### Data
+- **Sync**: MUD tables via @latticexyz/recs + store sync
+- **Indexer**: @latticexyz/store indexer + explorer
+- **Extra**: LangChain (in client AI) · howler (audio)
+
+#### Tooling
+- **Monorepo**: pnpm workspaces
+- **Dev runner**: mprocs
+- **Quality**: ESLint 9 · Prettier · Husky · commitlint
+
+### Versions
+
+### v0.1.1 — Core loop on MUD
+
+- **Date**: 2024 Q3
+- **Id**: mud-011
+- **Network**: Redstone mainnet
+
+The core game, including space types, planet types and silver mining, migrated to the MUD engine, with a new dynamic Tick Rate system for more flexible, strategic pacing.
+
+**Highlights:**
+- Core gameplay ported to MUD's ECS world
+- Dynamic Tick Rate system
+- Planets protocol fully implemented
+
+**Links:**
+- [r1.dfmud.xyz](https://r1.dfmud.xyz/)
+
+### v0.1.2 — Guilds & account delegation
+
+- **Date**: 2024 Q4
+- **Id**: mud-012
+- **Network**: Redstone mainnet
+
+Introduced a guild system with account delegation, plus modules for rapid development and integration of artifacts to speed up shipping key artifacts.
+
+**Highlights:**
+- Guild system + account delegation
+- Rapid artifact development / integration modules
+- Players protocol ~60% complete
+
+**Links:**
+- [r2.dfmud.xyz](https://r2.dfmud.xyz/)
+
+### v0.1.3 — Cross round artifacts & AI agent
+
+- **Date**: 2025 Q1
+- **Id**: mud-013
+- **Network**: Base mainnet
+
+The public roadmap advances with cross round artifact support, AI assisted decision tooling and onboarding improvements, with the project maturing beyond a straight Dark Forest port.
+
+**Highlights:**
+- Cross round artifact support
+- AI assisted decision tooling (in client LangChain)
+- Onboarding improvements
+
+### v0.1.4 — New junk mechanic
+
+- **Date**: 2025 Q2
+- **Id**: mud-014
+- **Network**: Base mainnet
+
+Introduced a junk mechanic that caps how many planets each player can control, narrowing the gap between veterans and newcomers and improving fairness. Artifact parameters were rebalanced across functions.
+
+**Highlights:**
+- Per player planet cap via junk mechanic
+- Fairer veteran ↔ newcomer balance
+- Artifact parameters rebalanced
+
+### Punk v0.1.1 — Dark Forest Punk: new materials
+
+- **Date**: 2025 Q4
+- **Id**: punk-011
+- **Network**: Opitimism mainnet
+
+The rebrand to Dark Forest Punk. Introduced 11 biome based materials generated from perlin driven planet attributes (foundation for a future technology tree), plus a purchasable space junk mechanic that expands planet ownership capacity and routes proceeds into the prize pool.
+
+**Highlights:**
+- 11 biome based materials (perlin driven MaterialType enum)
+- Foundation for a technology tree
+- Purchasable space junk → prize pool
+
+**Links:**
+- [dark forest punk](https://github.com/dfarchon/dark-forest-punk)
+- [dfpunk.xyz](https://dfpunk.xyz/)
+
+## Dark Forest Aztec
+
+- **Id**: aztec
+- **Codename**: dfpunk aztec · v0.1.0
+- **Period**: Experimental · Aztec testnet
+- **Maintainer**: DFArchon team (community)
+- **Tagline**: A privacy native rebuild: porting Dark Forest onto Aztec with Noir contracts.
+- **Repo**: https://github.com/dfarchon/dark-forest-aztec
+
+### Story
+
+A parallel experimental branch exploring what "programmable privacy" means for fully onchain games. v0.1.0 ports the core features of Dark Forest 0.6 onto the Aztec Network. The contract language shifts from Solidity/Diamond to Noir, split into storage contracts (planet, player, artifact, arrival, world) and system contracts (core, move, admin). ZK proving is native to Aztec and happens in the PXE client, replacing offchain Circom/snarkjs. The defining design is the state hash model: contracts store a Poseidon2 hash of each entity, transactions pass full state as input and verify it against the stored hash, keeping the onchain footprint tiny while full state lives offchain. Home coordinates and fleets become first class private notes, and a dedicated indexer server rebuilds public table state into snapshots.
+
+### Stack
+
+#### Language
+- **Language**: TypeScript 5.9 + Noir
+- **Runtime**: Node 24 · pnpm 10.28
+
+#### Contracts
+- **Language**: Noir (Aztec)
+- **Architecture**: Storage contracts + System contracts
+- **State model**: Poseidon2 state hash (full state offchain)
+- **Accounts**: Aztec account / burner accounts
+
+#### ZK
+- **Proving**: Native Aztec circuits in PXE (client side)
+- **Hash**: Poseidon2 (was MiMC in v0.6.5)
+- **Privacy**: Private notes: home coords, fleet
+
+#### Frontend
+- **UI**: React 18 + WebGL renderer
+- **Build**: Vite 7
+- **Wallet**: @aztec/aztec.js + @aztec/wallets
+- **State**: styled components · idb
+
+#### Data
+- **Sync**: Aztec public log indexer (server + client)
+- **Server**: Indexer rebuilds tables → snapshot API
+
+#### Tooling
+- **Monorepo**: pnpm workspaces (client · contracts · server)
+- **Packages**: @dfpunk/* shared modules
+- **Quality**: ESLint 9 · Prettier · Husky · commitlint
+
+### Versions
+
+### v0.1.0 — DF 0.6 ported to Aztec
+
+- **Date**: Aztec testnet
+- **Id**: aztec-010
+- **Network**: Aztec testnet
+
+Ports the core features of Dark Forest 0.6 onto Aztec. Authoritative state transitions run in Noir system contracts; the React client submits private gameplay transactions and an indexer server serves consistent public snapshots. Early software, testnet only, unaudited.
+
+**Highlights:**
+- Contracts rewritten in Noir (storage + system layers)
+- Poseidon2 state hash storage; full state offchain
+- Private notes for home coordinates & fleet
+- Dedicated indexer server + snapshot API
+
+**Links:**
+- [dark forest aztec](https://github.com/dfarchon/dark-forest-aztec)
+
+## Stack comparison
+
+| Dimension | Origin | ARES | MUD | Aztec |
+| --- | --- | --- | --- | --- |
+| Contract language | Solidity | Solidity | Solidity | Noir |
+| Contract architecture | Diamond / ERC-2535 (v0.6.5) | Diamond / ERC-2535 | MUD ECS: tables + Systems | Storage + System contracts |
+| Contract toolchain | Hardhat | Hardhat 2.6.8 | Foundry v1.0.0 + MUD v2.2.23 | Aztec.js / aztec nargo |
+| ZK proving | Circom + snarkjs (offchain) | Circom + snarkjs (enhanced) | Circom + snarkjs (carried over) | Native Aztec circuits in PXE |
+| Hash function | MiMC | MiMC | MiMC | Poseidon2 |
+| Onchain state | Full entity fields | Full entity fields | Full entity fields (tables) | Poseidon2 state hash (state offchain) |
+| Frontend build | Webpack | Webpack | Vite | Vite 7 |
+| Data sync model | Contract events | Contract events | MUD tables (recs + store sync) | Public log indexer (server + client) |
+| Account model | Burner wallet | Burner wallet | EOA + account delegation | Aztec account / burner accounts |
+| Package manager | yarn workspaces | yarn v1 workspaces | pnpm workspaces | pnpm workspaces |
+| Node runtime | Node ≥ 16 | Node 16 | Node 20 | Node 24 |
+| TypeScript | 4.5 | 4.5 | 5.6 | 5.9 |
