@@ -25,14 +25,14 @@ export default function Mark({ index, total, size = 54, className = "" }: MarkPr
   return (
     <svg width={size} height={size} className={className} aria-hidden>
       {/* faint full track */}
-      <circle cx={cx} cy={cx} r={r} fill="none" stroke="rgba(244,244,245,0.12)" strokeWidth={stroke} />
+      <circle cx={cx} cy={cx} r={r} fill="none" stroke="#2B1F26" strokeWidth={stroke} />
       {/* single lit slice */}
       <circle
         cx={cx}
         cy={cx}
         r={r}
         fill="none"
-        stroke="#F4F4F5"
+        stroke="#FFB7C5"
         strokeWidth={stroke}
         strokeLinecap="round"
         strokeDasharray={`${litLen} ${c - litLen}`}

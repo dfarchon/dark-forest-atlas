@@ -10,17 +10,17 @@ const COLS = [
 
 export default function StackComparison() {
   return (
-    <section id="compare" className="scroll-mt-24 border-t border-line py-40">
+    <section
+      id="compare"
+      className="scroll-mt-24 border-t border-neutral-800 py-40"
+    >
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
           <p className="label mb-8">side by side</p>
-          <h2 className="font-display text-4xl font-light lowercase leading-[1.05] tracking-tightest text-ink sm:text-6xl">
-            what changed
-          </h2>
-          <p className="mt-8 max-w-xl font-light text-steel">
+          <h2 className="display">what changed</h2>
+          <p className="reading mt-8">
             ARES kept the original stack; MUD rebuilt it on an ECS engine; Aztec
-            is a separate, privacy native branch that swaps Solidity for Noir
-            and moves proving onchain.
+            is a separate, privacy native branch that swaps Solidity for Noir.
           </p>
         </Reveal>
 
@@ -28,13 +28,13 @@ export default function StackComparison() {
           <div className="mt-16 overflow-x-auto">
             <table className="w-full border-collapse text-left">
               <thead>
-                <tr className="border-b border-ink/20">
+                <tr className="border-b border-neutral-800">
                   <th className="py-5 pr-6 align-bottom">
                     <span className="label">dimension</span>
                   </th>
                   {COLS.map((c) => (
                     <th key={c.key} className="px-4 py-5 align-bottom">
-                      <span className="block font-display text-lg font-light lowercase tracking-tight text-ink">
+                      <span className="block font-sans text-lg font-semibold lowercase tracking-tight text-pink-200">
                         {c.label}
                       </span>
                       <span className="label mt-1 block">{c.sub}</span>
@@ -46,15 +46,15 @@ export default function StackComparison() {
                 {COMPARE_ROWS.map((row) => (
                   <tr
                     key={row.dimension}
-                    className="border-b border-line transition-colors hover:bg-white/[0.02]"
+                    className="border-b border-neutral-800 transition-colors hover:bg-neutral-900"
                   >
-                    <td className="py-4 pr-6 align-top font-light text-ink">
+                    <td className="py-4 pr-6 align-top font-normal text-pink-100">
                       {row.dimension}
                     </td>
                     {COLS.map((c) => (
                       <td
                         key={c.key}
-                        className="px-4 py-4 align-top font-mono text-[12px] font-normal leading-snug text-steel"
+                        className="px-4 py-4 align-top font-sans text-[12px] font-normal leading-snug tabular-nums text-pink-100"
                       >
                         {row[c.key]}
                       </td>
@@ -66,7 +66,7 @@ export default function StackComparison() {
           </div>
         </Reveal>
 
-        <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.25em] text-faint">
+        <p className="label mt-6">
           sourced from each project's package.json, readme, mud.config.ts &amp;
           docs/architecture.md
         </p>

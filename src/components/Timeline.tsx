@@ -9,10 +9,8 @@ export default function Timeline() {
       <div className="mx-auto max-w-4xl px-6">
         <Reveal>
           <p className="label mb-8">i · iv · the drift</p>
-          <h2 className="max-w-2xl font-display text-4xl font-light lowercase leading-[1.05] tracking-tightest text-ink sm:text-6xl">
-            four forms, one lineage
-          </h2>
-          <p className="mt-8 max-w-md font-light text-steel">
+          <h2 className="display max-w-2xl">four forms, one lineage</h2>
+          <p className="reading mt-8">
             From Dark Forest's original zkSNARK architecture to its later Diamond based
             implementation, through DFArchon's continued development on Diamond and a ground up
             rebuild on MUD, to a privacy native port on Aztec. Four approaches, the same dark.
@@ -34,15 +32,17 @@ export default function Timeline() {
                     </div>
                     <div>
                       <div className="flex items-baseline gap-4">
-                        <span className="font-mono text-xs text-faint">{a.num}</span>
+                        <span className="font-sans text-xs tabular-nums text-pink-300">
+                          {a.num}
+                        </span>
                         <span className="label">{era.period}</span>
                       </div>
-                      <h3 className="mt-3 font-display text-3xl font-light lowercase tracking-tightest text-ink transition-colors duration-500 group-hover:text-steel sm:text-4xl">
+                      <h3 className="display mt-3 transition-colors duration-500 group-hover:text-pink-400">
                         {era.name}
                       </h3>
-                      <p className="mt-2 font-mono text-xs text-dim">{era.codename}</p>
-                      <p className="mt-5 max-w-lg font-light text-steel">{era.tagline}</p>
-                      <p className="mt-5 font-mono text-[11px] tracking-wider text-faint">
+                      <p className="mt-2 font-sans text-xs text-pink-300">{era.codename}</p>
+                      <p className="statement mt-5 max-w-lg">{era.tagline}</p>
+                      <p className="mt-5 font-sans text-[11px] tabular-nums tracking-wider text-pink-300">
                         {era.versions.map((v) => v.version).join("   ·   ")}
                       </p>
                     </div>

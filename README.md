@@ -18,15 +18,15 @@ tech-stack grid + version milestones), and a side-by-side **stack comparison**.
 ## Tech
 
 - [Vite](https://vite.dev/) + React + TypeScript
-- [Tailwind CSS](https://tailwindcss.com/) (deep-space theme)
+- [Tailwind CSS](https://tailwindcss.com/) (DFArchon brand palette)
 
 ## Develop
 
 ```sh
-npm install
-npm run dev             # http://localhost:5173
-npm run generate:agent  # refresh public/llms*.txt and public/api/*.json
-npm run build           # generate agent docs, then production build to dist/
+pnpm install
+pnpm dev                # http://localhost:5173
+pnpm generate:agent     # refresh public/llms*.txt and public/api/*.json
+pnpm build              # generate agent docs, then production build to dist/
 ```
 
 ## Editing content
@@ -37,7 +37,7 @@ relevant era's `versions` array, or add a comparison row in `COMPARE_ROWS`.
 
 ## Agent-readable interfaces
 
-`npm run generate:agent` (also runs during `npm run build`) regenerates static
+`pnpm generate:agent` (also runs during `pnpm build`) regenerates static
 agent-facing files from `versions.ts`:
 
 | URL | Contents |

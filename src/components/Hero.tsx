@@ -17,13 +17,11 @@ export default function Hero() {
       </Reveal>
 
       <Reveal delay={260}>
-        <h1 className="font-display text-6xl font-light lowercase leading-[0.9] tracking-tightest text-ink sm:text-8xl">
-          dark forest atlas
-        </h1>
+        <h1 className="display">dark forest atlas</h1>
       </Reveal>
 
       <Reveal delay={460}>
-        <p className="mx-auto mt-10 max-w-2xl text-base font-light leading-relaxed text-steel">
+        <p className="statement mx-auto mt-10 max-w-[45rem]">
           Dark Forest is a fully onchain strategy game with a zk fog of war.
           <br />
           This atlas follows the DFArchon community team's later branches and
@@ -34,7 +32,7 @@ export default function Hero() {
       <Reveal delay={600}>
         <a
           href="#timeline"
-          className="group relative mt-10 inline-flex min-w-72 items-center justify-center gap-5 border border-ink/30 bg-white/[0.04] px-6 py-4 font-mono text-[11px] uppercase tracking-[0.28em] text-ink shadow-[0_0_30px_rgba(255,255,255,0.06)] transition-all duration-500 hover:border-ink/70 hover:bg-white/[0.08] hover:shadow-[0_0_44px_rgba(255,255,255,0.1)]"
+          className="group relative mt-10 inline-flex min-w-72 items-center justify-center gap-5 border border-pink-300/40 bg-neutral-900 px-6 py-4 font-sans text-[11px] font-semibold uppercase tracking-ultra text-pink-300 shadow-[0_0_30px_rgba(255,232,237,0.08)] transition-all duration-500 hover:border-pink-400 hover:text-pink-400 hover:shadow-[0_0_44px_rgba(255,232,237,0.16)]"
         >
           <span>explore timeline</span>
         </a>

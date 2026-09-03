@@ -4,23 +4,32 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Pak: pure monochrome. No hue. Mass, light, void.
-        void: "#000000",
-        coal: "#0a0a0b",
-        ink: "#F4F4F5",
-        steel: "#A1A1A6",
-        dim: "#6E6E73",
-        faint: "#3A3A3D",
-        line: "#1A1A1C",
+        paper: "#FFFFFF",
+        ink: "#000000",
+        pink: {
+          100: "#FFE8ED",
+          200: "#FFD0DA",
+          300: "#FFB7C5",
+          400: "#E78398",
+          500: "#BC526A",
+          600: "#7D1C35",
+        },
+        neutral: {
+          100: "#EDE4E8",
+          400: "#9A8A92",
+          600: "#5C4F55",
+          800: "#2B1F26",
+          900: "#181215",
+        },
       },
       fontFamily: {
-        display: ['"Space Grotesk"', "ui-sans-serif", "system-ui", "sans-serif"],
-        sans: ['"Inter"', "ui-sans-serif", "system-ui", "sans-serif"],
-        mono: ['"Space Mono"', "ui-monospace", "SFMono-Regular", "monospace"],
+        display: ['"Fira Sans"', "system-ui", "sans-serif"],
+        sans: ['"Fira Sans"', "system-ui", "sans-serif"],
+        mono: ['"Fira Sans"', "system-ui", "sans-serif"],
       },
       letterSpacing: {
-        tightest: "-0.045em",
-        ultra: "0.4em",
+        tightest: "-0.02em",
+        ultra: "0.08em",
       },
       keyframes: {
         floaty: {

@@ -15,7 +15,7 @@ function Items({ items }: { items: StackItem[] }) {
       {items.map((it) => (
         <li key={it.label}>
           <span className="label mb-1.5 block">{it.label}</span>
-          <span className="font-light leading-snug text-ink">{it.value}</span>
+          <span className="font-sans font-normal leading-snug text-pink-100">{it.value}</span>
         </li>
       ))}
     </ul>
@@ -26,8 +26,8 @@ export default function StackGrid({ era }: { era: Era }) {
   return (
     <div className="grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
       {GROUPS.map((g) => (
-        <div key={g.key} className="border-t border-line pt-5">
-          <h4 className="mb-6 font-display text-base font-light lowercase tracking-tight text-steel">
+        <div key={g.key} className="border-t border-neutral-800 pt-5">
+          <h4 className="mb-6 font-sans text-base font-semibold lowercase tracking-tight text-pink-200">
             {g.label}
           </h4>
           <Items items={era.stack[g.key]} />

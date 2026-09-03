@@ -19,7 +19,7 @@ function VersionItem({
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <article className="border-t border-line">
+    <article className="border-t border-neutral-800">
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
@@ -27,20 +27,20 @@ function VersionItem({
         className="group grid w-full grid-cols-1 items-baseline gap-x-12 gap-y-2 py-7 text-left transition-colors md:grid-cols-[11rem_1fr]"
       >
         <div>
-          <span className="font-mono text-sm text-ink">{v.version}</span>
-          <span className="mt-1.5 block font-mono text-xs text-faint">{v.date}</span>
+          <span className="font-sans text-sm tabular-nums text-pink-100">{v.version}</span>
+          <span className="mt-1.5 block font-sans text-xs tabular-nums text-pink-100">
+            {v.date}
+          </span>
           {v.network && (
-            <span className="mt-2 block font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
-              net · {v.network}
-            </span>
+            <span className="label mt-2 block">net · {v.network}</span>
           )}
         </div>
         <div className="flex items-start justify-between gap-6">
-          <h4 className="font-display text-2xl font-light lowercase tracking-tight text-ink transition-colors group-hover:text-steel">
+          <h4 className="font-sans text-[25px] font-semibold lowercase leading-[1.3] tracking-tight text-pink-200 transition-colors group-hover:text-pink-400">
             {v.title}
           </h4>
           <span
-            className={`mt-1.5 shrink-0 select-none font-mono text-lg leading-none text-faint transition-all duration-300 group-hover:text-ink ${
+            className={`mt-1.5 shrink-0 select-none font-sans text-lg leading-none text-pink-300 transition-all duration-300 group-hover:text-pink-400 ${
               open ? "rotate-45" : ""
             }`}
             aria-hidden
@@ -54,11 +54,11 @@ function VersionItem({
         <div className="grid grid-cols-1 gap-x-12 gap-y-3 pb-10 md:grid-cols-[11rem_1fr]">
           <div className="hidden md:block" aria-hidden />
           <div>
-            <p className="max-w-2xl font-light leading-relaxed text-steel">{v.summary}</p>
+            <p className="reading">{v.summary}</p>
             <ul className="mt-6 space-y-2.5">
               {v.highlights.map((h) => (
-                <li key={h} className="flex gap-3 text-sm font-light text-dim">
-                  <span className="mt-2 h-px w-3 shrink-0 bg-dim" />
+                <li key={h} className="flex gap-3 font-sans text-sm font-normal text-pink-100">
+                  <span className="mt-2 h-px w-3 shrink-0 bg-pink-400" />
                   {h}
                 </li>
               ))}
@@ -71,7 +71,7 @@ function VersionItem({
                     href={l.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="font-mono text-[11px] uppercase tracking-wider text-dim underline-offset-4 transition-colors hover:text-ink hover:underline hover:decoration-faint"
+                    className="font-sans text-[11px] font-semibold uppercase tracking-ultra text-pink-300 underline-offset-4 transition-colors hover:text-pink-400 hover:underline"
                   >
                     {l.label} ↗
                   </a>
@@ -97,10 +97,13 @@ export default function EraSection({
   const a = ACCENTS[era.id];
 
   return (
-    <section id={era.id} className="relative scroll-mt-24 overflow-hidden border-t border-line py-40">
+    <section
+      id={era.id}
+      className="relative scroll-mt-24 overflow-hidden border-t border-neutral-800 py-40"
+    >
       {/* colossal ghost index */}
       <span
-        className="pointer-events-none absolute -top-10 right-0 select-none font-display text-[34vw] font-light leading-none text-white/[0.025] sm:text-[24rem]"
+        className="pointer-events-none absolute -top-10 right-0 select-none font-sans text-[34vw] font-semibold leading-none text-pink-100/[0.04] sm:text-[24rem]"
         aria-hidden
       >
         {a.num}
@@ -111,23 +114,17 @@ export default function EraSection({
         <Reveal>
           <div className="mb-12 flex items-center gap-6">
             <Mark index={index} total={total} size={40} />
-            <span className="h-px flex-1 bg-line" />
+            <span className="h-px flex-1 bg-neutral-800" />
             <span className="label">{era.period}</span>
           </div>
-          <h2 className="font-display text-5xl font-light lowercase leading-[0.95] tracking-tightest text-ink sm:text-7xl">
-            {era.name}
-          </h2>
-          <p className="mt-4 font-mono text-sm text-dim">{era.codename}</p>
-          <p className="mt-8 max-w-2xl text-xl font-light leading-relaxed text-steel">
-            {era.tagline}
-          </p>
+          <h2 className="display">{era.name}</h2>
+          <p className="mt-4 font-sans text-sm text-pink-300">{era.codename}</p>
+          <p className="statement mt-8 max-w-[45rem]">{era.tagline}</p>
         </Reveal>
 
         {/* story */}
         <Reveal delay={120}>
-          <p className="mt-16 max-w-2xl border-l border-line pl-7 font-light leading-loose text-ink/90">
-            {era.story}
-          </p>
+          <p className="reading mt-16 border-l border-neutral-800 pl-7">{era.story}</p>
         </Reveal>
 
         {/* stack */}
@@ -140,7 +137,7 @@ export default function EraSection({
         <Reveal delay={120}>
           <div className="mb-2 mt-28 flex items-baseline justify-between">
             <p className="label">versions &amp; milestones</p>
-            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-faint">
+            <span className="font-sans text-[11px] font-semibold uppercase tracking-ultra text-pink-300">
               {era.versions.length} releases · tap to expand
             </span>
           </div>
@@ -158,7 +155,7 @@ export default function EraSection({
             href={era.repo}
             target="_blank"
             rel="noreferrer"
-            className="mt-14 inline-flex items-center gap-2 border-t border-line pt-10 font-mono text-[11px] uppercase tracking-wider text-dim transition-colors hover:text-ink"
+            className="mt-14 inline-flex items-center gap-2 border-t border-neutral-800 pt-10 font-sans text-[11px] font-semibold uppercase tracking-ultra text-pink-300 transition-colors hover:text-pink-400"
           >
             source · {repoLabel(era.repo)} ↗
           </a>

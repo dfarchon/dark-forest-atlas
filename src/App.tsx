@@ -21,17 +21,20 @@ export default function App() {
       <Atmosphere />
 
       <div className="relative z-10">
-        <nav className="fixed inset-x-0 top-0 z-50 mix-blend-difference">
+        <nav className="fixed inset-x-0 top-0 z-50">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-            <a href="#top" className="font-mono text-xs tracking-[0.3em] text-white">
-              df<span className="text-white/50">/</span>atlas
+            <a
+              href="#top"
+              className="font-sans text-[15px] font-semibold uppercase tracking-ultra text-pink-300"
+            >
+              df<span className="text-pink-400">/</span>atlas
             </a>
             <ul className="hidden items-center gap-8 sm:flex">
               {NAV.map((n) => (
                 <li key={n.href}>
                   <a
                     href={n.href}
-                    className="font-mono text-[10px] uppercase tracking-[0.3em] text-white/60 transition-colors hover:text-white"
+                    className="font-sans text-[11px] font-semibold uppercase tracking-ultra text-pink-300 transition-colors hover:text-pink-400"
                   >
                     {n.label}
                   </a>
@@ -50,20 +53,18 @@ export default function App() {
           <StackComparison />
         </main>
 
-        <footer className="border-t border-line py-20">
+        <footer className="border-t border-neutral-800 py-20">
           <div className="mx-auto max-w-4xl px-6">
             <Reveal>
-              <p className="font-display text-3xl font-light lowercase tracking-tightest text-steel">
-                the world has no off switch.
-              </p>
-              <p className="mt-8 max-w-xl text-sm font-light leading-relaxed text-dim">
+              <p className="statement lowercase">the world has no off switch.</p>
+              <p className="reading mt-8">
                 An unofficial atlas of the community maintained Dark Forest. Original game by the
                 Dark Forest team; community versions by the{" "}
                 <a
                   href="https://x.com/DFArchon"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-steel underline decoration-line underline-offset-4 hover:text-ink"
+                  className="text-pink-300 underline decoration-pink-400/30 underline-offset-4 hover:text-pink-400"
                 >
                   DFArchon team
                 </a>
@@ -82,7 +83,7 @@ export default function App() {
                     href={x.h}
                     target="_blank"
                     rel="noreferrer"
-                    className="font-mono text-[10px] uppercase tracking-[0.3em] text-dim transition-colors hover:text-ink"
+                    className="font-sans text-[11px] font-semibold uppercase tracking-ultra text-pink-300 transition-colors hover:text-pink-400"
                   >
                     {x.l} ↗
                   </a>
