@@ -27,6 +27,9 @@ pnpm install
 pnpm dev                # http://localhost:5173
 pnpm generate:agent     # refresh public/llms*.txt and public/api/*.json
 pnpm build              # generate agent docs, then production build to dist/
+pnpm netlify:link       # once: connect this directory to a Netlify site
+pnpm netlify:deploy     # build, then upload dist/ to a draft URL
+pnpm netlify:deploy:prod
 ```
 
 ## Editing content

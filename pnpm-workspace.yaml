@@ -19,6 +19,7 @@ overrides:
   "@types/react-dom": "$@types/react-dom"
   "@vitejs/plugin-react": "$@vitejs/plugin-react"
   autoprefixer: "$autoprefixer"
+  netlify-cli: "$netlify-cli"
   oxlint: "$oxlint"
   postcss: "$postcss"
   tailwindcss: "$tailwindcss"

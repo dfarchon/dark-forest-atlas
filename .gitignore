@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+.netlify
 
 # Tools (local-only utilities, e.g. OG image generation)
 tools/
